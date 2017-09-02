@@ -1,0 +1,25 @@
+{
+  "name": "react-redux-todo-app",
+  "version": "1.0.0",
+  "description": "trello app sample",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "mongoose": "^4.8.6",
+    "socket.io": "^1.7.3",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "webpack": "^2.3.0"
+  }
+}
