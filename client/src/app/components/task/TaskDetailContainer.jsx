@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import TaskDetailComponentView from './TaskDetailComponentView.jsx';
+import TaskDetailView from './TaskDetailView.jsx';
 
-class TaskDetailComponent extends  React.Component {
+class TaskDetailContainer extends  React.Component {
 
     constructor(props) {
         super(props);
@@ -10,7 +10,7 @@ class TaskDetailComponent extends  React.Component {
 
     render(){
         return(
-            <TaskDetailComponentView name={this.props.task.name}
+            <TaskDetailView name={this.props.task.name}
                                      description={this.props.task.description}
                                      status={this.props.task.status}
             />
@@ -18,4 +18,4 @@ class TaskDetailComponent extends  React.Component {
     }
 }
 
-export default TaskDetailComponent;
+export default TaskDetailContainer;

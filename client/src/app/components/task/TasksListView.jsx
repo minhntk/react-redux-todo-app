@@ -1,14 +1,17 @@
 import React, {Component} from 'react';
-import TaskDetailComponent from './TaskDetailComponent.jsx';
+import TaskDetailContainer from './TaskDetailContainer.jsx';
 
-class TasksListComponentView extends  React.Component {
+class TasksListView extends  React.Component {
 
     render(){
+        if(!this.props.tasks) {
+            return(<div></div>);
+        }
         let listItems = [];
         for(let i = 0; i < this.props.tasks.length; i++) {
             let task = this.props.tasks[i];
             if(task.status === this.props.type) {
-                listItems.push(<TaskDetailComponent key={task.id} task={task} />)
+                listItems.push(<TaskDetailContainer key={task.id} task={task} />)
             }
         }
         return(
@@ -20,4 +23,4 @@ class TasksListComponentView extends  React.Component {
     }
 }
 
-export default TasksListComponentView;
+export default TasksListView;

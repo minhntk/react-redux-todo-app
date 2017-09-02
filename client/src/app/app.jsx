@@ -1,25 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import todoApp from './reducers/index.jsx';
 import TasksContainerComponent from './components/TasksContainerComponent.jsx';
-//import { AppContainer } from 'react-hot-loader';
 
+let store = createStore(todoApp)
 
-ReactDOM.render(<TasksContainerComponent />, document.getElementById('main'));
-
-/*const render = (Component) => {
-    ReactDOM.render(
-        <AppContainer>
-            <Component/>
-        </AppContainer>,
-        document.getElementById('main')
-    );
-};
-
-render(TasksContainerComponent);
-
-// Hot Module Replacement API
-if (module.hot) {
-    module.hot.accept('./components/TasksContainerComponent.jsx', () => {
-        render(TasksContainerComponent)
-    });
-}*/
+render(
+  <Provider store={store}>
+    <TasksContainerComponent />
+  </Provider>,
+  document.getElementById('main')
+);

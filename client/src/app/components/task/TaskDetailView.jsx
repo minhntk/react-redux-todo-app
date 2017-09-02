@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class TaskDetailComponentView extends  React.Component {
+class TaskDetailView extends  React.Component {
 
     render(){
         return(
@@ -22,4 +22,4 @@ class TaskDetailComponentView extends  React.Component {
     }
 }
 
-export default TaskDetailComponentView;
+export default TaskDetailView;
