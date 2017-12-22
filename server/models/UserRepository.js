@@ -24,7 +24,6 @@ module.exports = class UserRepository {
                 resolve(JSON.stringify(userList));
             });
         });
-
     }
 
     save(){

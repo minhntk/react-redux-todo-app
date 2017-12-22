@@ -1,16 +1,24 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux'
 import TasksListView from './TasksListView.jsx';
-import Tasks from '../../data/Task.js';
+import { getAllTasks } from '../../actions/taskActions.jsx';
+import axios from 'axios';
 
 class TasksListContainer extends  React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            name: 'Task List Name',
-            tasks: Tasks
-        };
+    }
+
+    componentWillMount() {
+        let ref = this;
+        axios.get('/api/dashboard/findAll')
+            .then(response => {
+                console.log(response.data);
+                ref.setState({
+                    tasks: response.data
+                });
+            });
     }
 
 
@@ -21,14 +29,13 @@ class TasksListContainer extends  React.Component {
     }
 }
 
-const mapStateToProps = state => {
-  console.log(state.task);
+const mapStateToProps = (state, ownProps) => {
   return {
-    tasks: state.task.taskList
+    tasks: state.tasks
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   return {
   }
 }

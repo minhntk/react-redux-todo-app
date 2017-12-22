@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import TaskFormView from './TaskFormView.jsx';
 import { connect } from 'react-redux';
-import {addTask} from '../../actions/index.jsx';
+import {addTask} from '../../actions/taskActions.jsx';
+import axios from 'axios';
 
 class TaskFormContainer extends  React.Component {
 
@@ -24,7 +25,11 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     onAddTask: task => {
-        dispatch(addTask(task));
+        axios.post('/api/task/addTask', task)
+             .then(response => {
+                console.log(response.data);
+                dispatch(addTask(task));
+            });
     }
   }
 }

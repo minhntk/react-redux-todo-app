@@ -1,4 +1,3 @@
-let nextTodoId = 0;
 export const ADD_TASK = 'ADD_TASK';
 
 export const addTask = task => {

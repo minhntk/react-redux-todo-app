@@ -10,8 +10,7 @@ class UserProfileContainer extends  React.Component {
 
     render(){
         return(
-            <UserProfileView username="minhntk"
-            />
+            <UserProfileView />
         );
     }
 }

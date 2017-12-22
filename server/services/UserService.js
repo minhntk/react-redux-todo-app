@@ -9,7 +9,7 @@ module.exports = class UserService {
 
     login() {
         return ((req, res, next) => {
-            res.send('login service 8888');
+            res.send({isAuthenticated: true, payload: {}});
         });
     }
 

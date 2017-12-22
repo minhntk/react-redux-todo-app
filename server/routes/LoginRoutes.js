@@ -10,7 +10,7 @@ module.exports = class LoginRoutes {
         const router = express.Router();
         const userService = new UserService();
 
-        router.get('/api/', userService.login());
+        router.post('/api/login', userService.login());
         router.get('/api/user/findAll', userService.findAll());
         router.get('/api/user/save', userService.save());
         this.$router = router;

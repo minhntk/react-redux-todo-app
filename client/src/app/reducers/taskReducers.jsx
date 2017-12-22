@@ -1,18 +1,12 @@
-import Tasks from '../data/Task.js';
 
 
-const initialState = {
-  taskList: Tasks
-}
-
-const taskReducers = (state = initialState, action) => {
+const taskReducers = (state, action) => {
 
   switch (action.type) {
     case 'ADD_TASK':
-        action.task.id = state.taskList.length;
         return Object.assign({}, state, {
-          taskList: [
-            ...state.taskList,
+            tasks: [
+            ...state.tasks,
             action.task
           ]
         })

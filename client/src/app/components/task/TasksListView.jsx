@@ -16,7 +16,7 @@ class TasksListView extends  React.Component {
         }
         return(
             <div className="task-list-detail-container">
-                <div>{this.props.type} Task</div>
+                <div>{this.props.type}</div>
                 <div className="task-detail-container">{listItems}</div>
             </div>
         );
