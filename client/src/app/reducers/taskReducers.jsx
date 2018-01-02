@@ -1,6 +1,7 @@
 
+const INITIAL_STATE = {tasks: []};
 
-const taskReducers = (state, action) => {
+const taskReducers = (state = INITIAL_STATE, action) => {
 
   switch (action.type) {
     case 'ADD_TASK':

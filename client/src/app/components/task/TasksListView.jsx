@@ -4,6 +4,7 @@ import TaskDetailContainer from './TaskDetailContainer.jsx';
 class TasksListView extends  React.Component {
 
     render(){
+        console.log(this.props);
         if(!this.props.tasks) {
             return(<div></div>);
         }

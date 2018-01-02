@@ -4,7 +4,7 @@ import taskReducers from './taskReducers.jsx';
 import userReducers from './userReducers.jsx';
 
 const todoApp = combineReducers({
-  task: taskReducers,
+  tasks: taskReducers,
   user: userReducers
 });
 

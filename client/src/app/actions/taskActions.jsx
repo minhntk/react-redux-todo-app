@@ -1,4 +1,5 @@
 export const TASK_GET_ALL = 'TASK_GET_ALL';
+export const ADD_TASK = 'ADD_TASK';
 
 export function getAllTasks(tasks) {
     return {

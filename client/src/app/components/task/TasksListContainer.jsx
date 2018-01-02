@@ -8,16 +8,19 @@ class TasksListContainer extends  React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            tasks: []
+        }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         let ref = this;
         axios.get('/api/dashboard/findAll')
             .then(response => {
-                console.log(response.data);
                 ref.setState({
                     tasks: response.data
                 });
+                console.log('did mount');
             });
     }
 
@@ -29,7 +32,8 @@ class TasksListContainer extends  React.Component {
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
+  console.log(state.tasks);
   return {
     tasks: state.tasks
   }
