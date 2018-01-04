@@ -5,12 +5,12 @@ import { Link } from 'react-router';
 //import { DragDropContext } from 'react-dnd';
 //import HTML5Backend from 'react-dnd-html5-backend';
 
-class AppContainer extends  Component {
+class AppContainer extends Component {
 
-    render() {
-        return (
-            <div>
-                <div className="navigation-menu">
+  render() {
+    return (
+      <div>
+        <div className="navigation-menu">
                     <span className="header-navigator">
                         <Link to="/">Home</Link>
                     </span>
@@ -20,13 +20,13 @@ class AppContainer extends  Component {
                     <span className="header-navigator">
                         <Link to="/blog">Blog</Link>
                     </span>
-                </div>
-                <div className="container">
-                    {this.props.children}
-                </div>
-            </div>
-        );
-    }   
+        </div>
+        <div className="container">
+          {this.props.children}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default AppContainer;  

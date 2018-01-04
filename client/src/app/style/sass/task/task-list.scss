@@ -5,7 +5,20 @@
 
   .task-list-detail-container {
     float: left;
-    width: 23%;
+    width: 20%;
+    padding: 10px;
+    margin: 10px 15px;
+    background: #e2e4e6;
+  }
+  .task-detail-container {
+    border: 1px solid white;
+    margin-top: 10px;
+    padding: 10px;
+    background: white;
+    .task-title {
+      font-weight: 600;
+      font-size: 20px;
+    }
   }
 }
 

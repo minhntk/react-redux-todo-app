@@ -10,10 +10,10 @@ const userReducers = (state = {}, action) => {
 
   switch (action.type) {
     case 'LOGIN_REQUEST':
-        return Object.assign({}, state, {
-          isAuthenticated: true,
-          payload: {}
-        })
+      return Object.assign({}, state, {
+        isAuthenticated: true,
+        payload: {}
+      })
     default:
       return state
   }

@@ -1,21 +1,21 @@
 import React, {Component} from 'react';
 import TaskDetailView from './TaskDetailView.jsx';
 
-class TaskDetailContainer extends  React.Component {
+class TaskDetailContainer extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
 
-    render(){
-        return(
-            <TaskDetailView name={this.props.task.name}
-                                     description={this.props.task.description}
-                                     status={this.props.task.status}
-            />
-        );
-    }
+  render() {
+    return (
+      <TaskDetailView title={this.props.task.title}
+                      description={this.props.task.description}
+                      status={this.props.task.status}
+      />
+    );
+  }
 }
 
 export default TaskDetailContainer;
